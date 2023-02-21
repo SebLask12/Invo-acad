@@ -1,0 +1,127 @@
+.card {
+  width: 21vw;
+  min-height: 43rem;
+  border: 1px solid var(--color-pink);
+  border-radius: 3rem;
+  padding: 3rem;
+  margin-left: 1rem;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+
+  @include respond(tab-land) {
+    width: 26vw;
+  }
+
+  @include respond(tab-port) {
+    min-height: auto;
+    width: 80%;
+    margin-bottom: 2rem;
+    height: fit-content;
+  }
+
+  @include respond(phone) {
+    width: 90%;
+  }
+
+  &__heading {
+    text-align: left;
+    font-size: 2.4rem;
+    margin-bottom: 1.3rem;
+    font-weight: bolder;
+    color: var(--color-secondary);
+    @include respond(tab-port) {
+    }
+  }
+
+  &__pricing {
+    font-size: 4.8rem;
+    margin-bottom: 3rem;
+    font-weight: bold;
+    display: inline;
+
+    &::before {
+      content: "$";
+      font-size: 2rem;
+      vertical-align: top;
+    }
+
+    &::after {
+      content: "/year";
+      font-size: 2rem;
+      color: var(--color-grey);
+      font-weight: lighter;
+      vertical-align: bottom;
+    }
+
+    @include respond(tab-port) {
+      position: absolute;
+      top: 3rem;
+      right: 4rem;
+      float: right;
+    }
+
+    @include respond(phone) {
+      position: relative;
+      top: auto;
+      right: auto;
+      float: none;
+    }
+  }
+
+  &__description {
+    margin-bottom: 1.8rem;
+    color: var(--color-grey);
+
+    @include respond(tab-port) {
+      width: 25rem;
+    }
+  }
+
+  &__features {
+    margin-bottom: 3rem;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    &--item {
+      flex: 0 0 100%;
+      margin-bottom: 1rem;
+
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 1.4rem;
+        width: 1.4rem;
+        background-color: #ee9c50;
+        border-radius: 50%;
+        margin-right: 1.6rem;
+
+        background-image: url(../../../public/images/check.svg);
+        background-size: 1.2rem;
+        background-position: center;
+      }
+    }
+  }
+
+  &__button-box {
+    display: flex;
+    height: 100%;
+    align-items: end;
+
+    @include respond(tab-port) {
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+    }
+
+    @include respond(phone) {
+      position: relative;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}

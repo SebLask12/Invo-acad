@@ -1,0 +1,48 @@
+.button {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    padding: 1.6rem 1rem;
+    display: inline-block;
+    border-radius: 1.5rem;
+    background-color: var(--color-secondary);
+    color: white;
+    transition: all 0.2s;
+    border: 0;
+    width: 100%;
+
+    @include respond(tab-port) {
+      width: 30vw;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+  &:hover {
+    background-color: var(--color-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    background-color: var(--color-pressed);
+  }
+
+  &--violet {
+    background-color: var(--color-violet);
+
+    &:hover {
+      background-color: var(--color-hover-violet);
+    }
+
+    &:active {
+      background-color: var(--color-pressed-violet);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.heading {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  &--main {
+    margin-bottom: 1.8rem;
+    display: block;
+    font-size: 4.8rem;
+  }
+
+  &--sub {
+    display: block;
+    color: var(--color-grey);
+    font-size: 1.6rem;
+    width: 27rem;
+    font-weight: 300;
+  }
+}

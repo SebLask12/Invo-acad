@@ -1,0 +1,28 @@
+/// Root Styles file
+/// Here we define all the root variables we need for our project.
+/// For examples see Material Design color system: https://m2.material.io/design/color/the-color-system.html
+
+:root {
+    --color-primary: #202337;
+    
+    --color-orange: #EE9C50;
+
+    --color-background:#f9f8fb;
+
+    --color-secondary: #14132B;
+    --color-hover: #393850;
+    --color-pressed: #060613;
+
+    --color-violet:#7863f9;
+    --color-hover-violet: #9180ff;
+    --color-pressed-violet: #6a53f4;
+
+
+    
+    --color-pink: #e8e5f9;
+    --color-grey:#989bb4;
+
+    --default-font-size: 1.6rem;
+
+    --default-font-style: 'Source Sans Pro', sans-serif;
+}

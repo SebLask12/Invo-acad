@@ -1,0 +1,44 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+@import "styles/mixins.scss";
+@import "styles/normalize.scss";
+@import "styles/root.scss";
+@import "styles/fonts.scss";
+@import "styles/home.scss";
+@import "styles/header.scss";
+@import "styles/card.scss";
+@import "styles/utilities.scss";
+@import "styles/buttons.scss";
+
+html {
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16
+  }
+}
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+  font-weight: 400;
+  font-family: var(--default-font-style);
+  font-size: var(--default-font-size);
+  background-color: var(--color-background);
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
+p {
+  color: var(--color-on-surface);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
